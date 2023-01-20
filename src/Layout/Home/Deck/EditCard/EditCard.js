@@ -38,9 +38,7 @@ function EditCard() {
             
             } catch(error) {console.log(error)};
         };
-    
-        //getting and returning the deck fine but having issues setting state 
-        
+            
         currentDeck(deckId, cardId);
         
         return () => abortController.abort()
@@ -67,7 +65,7 @@ function EditCard() {
         const updatedCard = {...card, front: formData.front, back: formData.back}
        
         await updateCard(updatedCard, abortController.signal);
-        history.go(0);
+        history.push(`/decks/${deckId}`);
 
        }
 

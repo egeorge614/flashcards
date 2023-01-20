@@ -57,7 +57,7 @@ function AddCard() {
        async function submitHandler(event) {
         event.preventDefault(); 
         await createCard(deckId, formData, abortController.signal)
-        history.go(0);
+        history.push("/");
        }
 
     return (
