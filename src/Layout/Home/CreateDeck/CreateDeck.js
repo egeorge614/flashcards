@@ -26,7 +26,7 @@ function CreateDeck() {
 
    }
 
-  async function handleSubmit(event) {
+  async function submitHandler(event) {
     event.preventDefault();
     await createDeck(formData, abortController.signal);
     history.push("/");
@@ -53,7 +53,7 @@ function CreateDeck() {
              </ol>
         </nav>
         <h2>Create Deck</h2>
-        <DeckForm handleSubmit={handleSubmit} formData={formData} changeHandler={changeHandler} />
+        <DeckForm submitHandler={submitHandler} formData={formData} changeHandler={changeHandler} />
     </div>
    )
 
